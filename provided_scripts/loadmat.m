@@ -21,7 +21,7 @@ function [result, extraresult]=loadmat(name);
 % loadmat and savemat must transpose the data. They do so now.
 % 
 % To make it still more confusing: in matlab plot(a) plots the columns of a
-% matrix. I allows like to plot the rows of a matrix, that why I until now, did
+% matrix. I allows like to plot the rows of a matrix, that's why until now, I did
 % not let loadmat and savemat do the transposition. But now I feel it is more
 % consistent to let make sure the same things are called rows in mbf matrices and
 % matlab matrices.

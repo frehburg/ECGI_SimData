@@ -1,7 +1,7 @@
 % function to read all exported data from ECGsim into a matlab structure
 % (DATA)
 % - DATA.GEOM contains all geometries in the volume conductor model (faces
-% (ITRI) and vertices (VER). ALso the indexs of teh vertices of teh 12 lead
+% (ITRI) and vertices (VER). ALso the indexs of the vertices of the 12 lead
 % - ECG and the wilson central terminal
 % DATA.ECG contains all ECGs with the accompanying electrode positions
 % - DATA.VENTR or DATA.ATRIA contains all distance and adjacency matrices of
