@@ -1,7 +1,7 @@
-function loadcase()
+function loadcase(path)
 clc
 clear
-path = uigetdir('ECGI_SimData\data\','Select a Case File');
+%path = uigetdir('ECGI_SimData\data\','Select a Case File');
 disp(path)
 % extract case name
 C = strsplit(path,'\');
