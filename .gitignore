@@ -1,2 +1,2 @@
-
-*.txt
+# remove compiled matlab scripts
+*.asv
