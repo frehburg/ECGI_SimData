@@ -1,13 +1,13 @@
 function loadcase(path)
 clc
 clear
-%path = uigetdir('ECGI_SimData\data\','Select a Case File');
+%path = uigetdir('ECGI_SimData\raw_data\','Select a Case File');
 disp(path)
 % extract case name
 C = strsplit(path,'\');
 name = string(C(9));
 % create the directory that stores the csv files
-mkdir('ECGI_SimData\export', name)
+mkdir('ECGI_SimData\data', name)
 
 % file names
 ecg_simulation_filename = 'ecgs\';
@@ -18,7 +18,7 @@ ventricular_beats_filename = 'ventricular_beats';
 atrial_beats_filename = 'atrial_beats';
 beat_filename = '\beat1\user.source';
 
-export_filename = '\export\';
+export_filename = '\data\';
 
 
 
@@ -54,7 +54,7 @@ end
 
 % ventricles
 if exist(append(path,'\',atrial_beats_filename),'dir') 
-    ventricular_beats = loadmat(append(path,'\',ventricular_beats_filename,beat_filename))
+    ventricular_beats = loadmat(append(path,'\',ventricular_beats_filename,beat_filename));
     writematrix(ventricular_beats,append('ECGI_SimData',export_filename,name,'\ventricular_beats.csv'));
 end
 
